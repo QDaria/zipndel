@@ -59,19 +59,19 @@ class Unzipndel:
         self.file_name = file_name
         self.file_format = file_format
 
-    def unzipit(self, passwd: str) -> pd.DataFrame:
+    def unzipit(self) -> pd.DataFrame:
         """
         Unzip the zip file, extract the written file, read the extracted file into a DataFrame, and delete the extracted file.
-
-        Parameters:
-        passwd (str): the password of the zip file
 
         Returns:
         df (pd.DataFrame): the dataframe extracted from the zip file
 
         Example:
-        >>> df = Unzipndel().unzipit(passwd)
+        >>> df = Unzipndel().unzipit()
         """
+        # prompt user for password
+        passwd = getpass.getpass('Password:')
+
         # unzip zip file and extract written file
         df_zip = f"{self.file_name}.zip"
         zf = zipfile.ZipFile(df_zip, mode='r')
@@ -82,7 +82,6 @@ class Unzipndel:
         df = read_func(self.file_name)
 
         # delete extracted file
-
         os.remove(self.file_name)
 
         return df
