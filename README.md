@@ -8,7 +8,7 @@ The **Zipndel** class provides automatic functionality for zipping and password-
 2. Second, compresses the same ‘file_name.file_format’ to a password protected zip file ‘file_name.zip’ default as ‘df.zip’ (f"{self.df}.zip")
 3. Lastly, deletes the file_name created in in step 1 is safely secured in a password protected zip file in step 2
 
-## Extraction
+## B - Extraction
 The **Unzipndel** class provides automatic functionality for unzipping and reading a password-protected zip file containing a pandas DataFrame, and then deleting the extracted file.
 1. First, unzips the password protected zip file created in the first function or class and extracts the file_name
 2. Second, reads the file_name into a DataFrame default called df.csv
