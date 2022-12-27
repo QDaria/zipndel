@@ -18,14 +18,15 @@ The **Unzipndel** class provides automatic functionality for unzipping and readi
 `pip install zipndel`
 
 ## Example usage A: Creation
->>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]}) # dummy df
->>> Zipndel().zipit(df) # Create and remember password
+```df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]}) # dummy df```
+```Zipndel().zipit(df) # Create and remember password```
 
 ## Example usage B: Extraction
->>> df = Unzipndel().unzipit() # Provide the password created in A 
+```df = Unzipndel().unzipit() # Provide the password created in A``` 
 
 
 # Directory tree
+```
 ├── README.rst
 ├── poetry.lock
 ├── pyproject.toml
@@ -36,4 +37,4 @@ The **Unzipndel** class provides automatic functionality for unzipping and readi
 └── tests
     ├── __init__.py
     └── test_zipndel.py
-    
+```  
